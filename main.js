@@ -7,6 +7,7 @@ const video = document.createElement('video');
 video.autoplay = true;
 video.playsInline = true;
 
+// test
 // Request access to the camera
 navigator.mediaDevices.getUserMedia({
     video: {
