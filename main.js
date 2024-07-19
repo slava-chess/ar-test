@@ -85,15 +85,9 @@ loader.load(
     }
 );
 
-let angle = 0;
 const speed = 0.01;
 
 function render() {
-    if (model) {
-        // Rotate the model around its Y axis
-        model.rotation.y += speed;
-    }
-
     controls.update();
     renderer.render(scene, camera);
     requestAnimationFrame(render);
