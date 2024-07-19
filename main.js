@@ -8,7 +8,11 @@ video.autoplay = true;
 video.playsInline = true;
 
 // Request access to the camera
-navigator.mediaDevices.getUserMedia({ video: true })
+navigator.mediaDevices.getUserMedia({
+    video: {
+        facingMode: { ideal: "environment" }
+    }
+})
     .then(stream => {
         video.srcObject = stream;
         video.play();
